@@ -1,7 +1,7 @@
 export function initializeIndexedDB(data) {
-  const dbName = "blogPostsDB";
+  const dbName = "clientsDB";
   const dbVersion = 1;
-  const storeName = "blogPostsStore";
+  const storeName = "clientsStore";
 
   const request = indexedDB.open(dbName, dbVersion);
 

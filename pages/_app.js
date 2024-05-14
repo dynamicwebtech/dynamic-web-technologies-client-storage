@@ -17,9 +17,6 @@ import DeclareStorageVariable from "../assets/functions/data/storage/DeclareStor
 import RemoveStorageVariable from "../assets/functions/data/storage/RemoveStorageVariable";
 import CheckUserDevice from "../assets/functions/dom/checkers/CheckUserDevice";
 import CheckScreenOrientation from "../assets/functions/dom/checkers/CheckScreenOrientation";
-import { fetchPortfolioProjects } from "@/assets/functions/async/fetchers/fetchPortfolioProjects";
-import { fetchReviews } from "@/assets/functions/async/fetchers/fetchReviews";
-import { BlogPostsProvider } from "@/assets/functions/contexts/blogPostsProvider";
 
 // Component Imports
 
@@ -28,7 +25,6 @@ import "../assets/styles/tools/global_classnames/global_classnames.css";
 import "../assets/styles/tools/overrides/overrides.css";
 import "../assets/styles/tools/resets/resets.css";
 import "../assets/styles/tools/library_styles/nprogress/nprogress.css";
-import { fetchBlogPosts } from "@/assets/functions/async/fetchers/fetchBlogPosts";
 
 //TODO: This is used to indicate if the client has not paid for the project and/or the monthly invoice(s)
 let IS_PAYMENT_REQUIRED = false;
@@ -306,9 +302,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <AnimatePresence mode="wait">
-      <BlogPostsProvider>
-        <Component {...pageProps} />
-      </BlogPostsProvider>
+      <Component {...pageProps} />
     </AnimatePresence>
   );
 }
