@@ -1,10 +1,10 @@
 /**
  *
- *  This is the fetchClients async function
+ *  This is the fetchProjects async function
  *
  */
 
-const fetchClients = async (fetch_path, setter, lSName) => {
+const fetchProjects = async (fetch_path, setter, lSName) => {
   try {
     const response = await fetch(fetch_path);
     if (response.ok) {
@@ -15,11 +15,11 @@ const fetchClients = async (fetch_path, setter, lSName) => {
 
       localStorage.setItem(lSName, STRINGIFY_DATA);
     } else {
-      console.error("Failed to fetch clients");
+      console.error("Failed to fetch projects");
     }
   } catch (error) {
-    console.error("Error fetching clients:", error);
+    console.error("Error fetching projects:", error);
   }
 };
 
-export { fetchClients };
+export { fetchProjects };

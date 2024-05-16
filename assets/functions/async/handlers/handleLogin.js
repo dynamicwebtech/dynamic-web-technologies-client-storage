@@ -10,7 +10,7 @@ export const handleLogin = async (e, username, password, formError, router) => {
   e.preventDefault();
 
   try {
-    const response = await axios.post(process.env.LOGIN_USER_FETCH_PATH, {
+    const response = await axios.post("/api/loginUser", {
       username,
       password,
     });

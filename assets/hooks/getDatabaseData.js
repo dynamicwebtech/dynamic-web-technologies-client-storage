@@ -6,17 +6,19 @@
 
 import { useState, useEffect } from "react";
 
-import { fetchReviews } from "../functions/async/fetchers/fetchReviews";
-import { fetchPortfolioProjects } from "../functions/async/fetchers/fetchPortfolioProjects";
+import { fetchClients } from "../functions/async/fetchers/fetchClients";
+import { fetchProjects } from "../functions/async/fetchers/fetchProjects";
 
 const getDatabaseData = () => {
   const [clients, setClients] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetchReviews("/api/getClients", setClients);
+    fetchClients("/api/getClients", setClients);
+    fetchProjects("/api/getProjects", setProjects);
   }, []);
 
-  return { clients };
+  return { clients, projects };
 };
 
 export default getDatabaseData;

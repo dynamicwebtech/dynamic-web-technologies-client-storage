@@ -17,8 +17,12 @@ import DeclareStorageVariable from "../assets/functions/data/storage/DeclareStor
 import RemoveStorageVariable from "../assets/functions/data/storage/RemoveStorageVariable";
 import CheckUserDevice from "../assets/functions/dom/checkers/CheckUserDevice";
 import CheckScreenOrientation from "../assets/functions/dom/checkers/CheckScreenOrientation";
+import { fetchClients } from "@/assets/functions/async/fetchers/fetchClients";
+import { fetchProjects } from "@/assets/functions/async/fetchers/fetchProjects";
 
 // Component Imports
+import { ClientsProvider } from "@/assets/functions/contexts/clientsProvider";
+import { ProjectsProvider } from "@/assets/functions/contexts/projectsProvider";
 
 // Style Imports
 import "../assets/styles/tools/global_classnames/global_classnames.css";
@@ -33,6 +37,8 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [updateUI, setUpdateUI] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(null);
+  const [clients, setClients] = useState([]);
+  const [projects, setProjects] = useState([]);
   // const [portfolioProjects, setPortfolioProjects] = useState([]);
   // const [siteReviews, setSiteReviews] = useState([]);
   // const [blogPosts, setBlogPosts] = useState([]);
@@ -125,6 +131,14 @@ function MyApp({ Component, pageProps }) {
   //   fetchReviews("/api/getReviews", setSiteReviews, "Site Reviews");
   //   fetchBlogPosts("/api/getBlogPosts", setBlogPosts, "Blog Posts");
   // }, []);
+  useEffect(() => {
+    let turnOnFetchers = false;
+
+    if (turnOnFetchers) {
+      fetchClients("/api/getClients", setClients, "Client Storage");
+      fetchProjects("/api/getProjects", setProjects, "Project Storage");
+    }
+  }, []);
 
   //! Session/Local Storage Clearing
   useEffect(() => {
