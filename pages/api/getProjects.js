@@ -1,18 +1,12 @@
-/**
- *
- *  This is the getProjects API
- *
- */
+import { MongoClient } from "mongodb";
 
 export const config = {
   api: {
-    bodyParser: false,
-    sizeLimit: "5gb",
+    bodyParser: {
+      sizeLimit: "5gb",
+    },
   },
 };
-
-import multer from "multer";
-import { MongoClient, ObjectId } from "mongodb";
 
 async function connectToDatabase() {
   const client = new MongoClient(process.env.PROJECTS_DB_CONNECTION_URI, {
@@ -23,4 +17,68 @@ async function connectToDatabase() {
   return client; // Return the MongoClient instance directly
 }
 
-export default async function handler(req, res) {}
+export default async function handler(req, res) {
+  let client = null;
+
+  try {
+    if (req.method === "POST") {
+      client = await connectToDatabase();
+      const collection = client
+        .db(process.env.PROJECTS_DB_NAME)
+        .collection(process.env.PROJECTS_DB_COLLECTION);
+
+      const {
+        projectID,
+        projectName,
+        projectNameID,
+        domainName,
+        creationDate,
+        packageType,
+        isHosting,
+        hostingPrice,
+        renewalDay,
+        websiteType,
+        additionalAddOns,
+        isCustomPrice,
+        customPrice,
+        projectGrandTotal,
+        projectCommentsNotes,
+      } = req.body;
+
+      const commentsArray = Array.isArray(projectCommentsNotes)
+        ? projectCommentsNotes
+        : [projectCommentsNotes];
+
+      await collection.insertOne({
+        projectID,
+        projectName,
+        projectNameID,
+        domainName,
+        creationDate,
+        packageType,
+        isHosting,
+        hostingPrice,
+        renewalDay,
+        websiteType,
+        additionalAddOns,
+        additionalPages: req.body.additionalPages,
+        isCustomPrice,
+        customPrice,
+        projectGrandTotal,
+        projectCommentsNotes: commentsArray,
+      });
+
+      res.status(200).json({ message: "Project submitted successfully!" });
+    } else {
+      res.status(405).json({ error: "Method Not Allowed" });
+    }
+  } catch (error) {
+    console.error("Error saving Project to database: ", error);
+    res.status(500).json({ error: "Failed to save Project." });
+  } finally {
+    if (client) {
+      await client.close();
+      console.log("CLOSED connection to Portfolio DB");
+    }
+  }
+}
