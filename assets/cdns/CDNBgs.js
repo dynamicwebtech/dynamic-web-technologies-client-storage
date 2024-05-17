@@ -4,6 +4,4 @@
  *
  */
 
-import { CDNBGReturn } from "./CDNReturns";
-
 export {};

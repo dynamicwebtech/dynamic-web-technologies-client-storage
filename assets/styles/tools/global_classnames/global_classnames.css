@@ -1,1 +1,54 @@
-/*# sourceMappingURL=global_classnames.css.map */
+.full-second {
+  transition: 1s ease-in-out !important;
+}
+
+.half-second {
+  transition: 0.5s ease-in-out !important;
+}
+
+.stay-put {
+  transition: 0s ease-in-out !important;
+  opacity: 1 !important;
+}
+
+.shake-element {
+  animation: shakeElement 0.2s ease-in-out infinite;
+}
+
+@keyframes shakeElement {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25%, 75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+.preloaded-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: loading 0.7s infinite alternate ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=global_classnames.css.map */

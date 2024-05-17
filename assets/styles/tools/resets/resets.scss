@@ -1,0 +1,204 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  // background-color: rgba(238, 238, 238, 0.6);
+  //   cursor: url(https://raw.githubusercontent.com/mxrked/Codingthefront_CDN/main/icons/custom-cursor.png),
+  //     default;
+  //   pointer-events: auto;
+  scroll-behavior: smooth;
+  // overflow: hidden; //! For some reason, this fixes the scrolling when mobile nav is opened issue
+  // white-space: nowrap;
+  overflow-x: hidden !important;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  // background-color: rgba(243, 243, 240, 0.238);
+  // line-height: 1;
+  // overflow: hidden;
+  // overflow-y: hidden;
+  background-color: #fafafa;
+  overflow-x: hidden !important;
+  white-space: nowrap;
+  pointer-events: auto;
+  // scrollbar-color: #1e2022 #c9d6df;
+  scrollbar-width: thin;
+  // background-color: red;
+
+  //   &::-webkit-scrollbar {
+  //     width: 12px;
+  //     // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  //   }
+  //   &::-webkit-scrollbar-track {
+  //     background: #c9d6df;
+  //   }
+  //   &::-webkit-scrollbar-thumb {
+  //     background: #1e2022;
+  //     // border: 1px solid $track;
+  //     border-top: none;
+  //     border-bottom: none;
+  //     cursor: pointer;
+  //   }
+  //   &::-webkit-scrollbar-thumb:hover {
+  //     background: #52616b;
+  //   }
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+input,
+button,
+textarea,
+select {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.page-cnt {
+  height: 100%;
+  width: 100%;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // width: 100%;
+  // height: 100%;
+  // transform: translate(-50%, -50%);
+  // // height: 100%;
+  // // opacity: 0;
+  // // visibility: hidden;
+  // overflow-x: hidden !important;
+}
+.page-cnt-inner {
+}
+// .page-cnt {
+//   height: 100vh;
+//   background-color: red;
+// }
+// .test-box {
+//   height: 600px;
+//   background-color: black;
+// }

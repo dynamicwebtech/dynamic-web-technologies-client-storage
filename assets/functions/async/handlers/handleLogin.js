@@ -20,7 +20,7 @@ export const handleLogin = async (e, username, password, formError, router) => {
     // Store the token in localStorage
     localStorage.setItem("Current User", token);
 
-    router.reload();
+    router.push("/dashboard");
   } catch (error) {
     formError("Invalid credentials!");
     console.error("Login error:", error);

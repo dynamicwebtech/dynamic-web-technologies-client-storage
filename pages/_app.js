@@ -82,6 +82,32 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
+  //! Sending user to login page if not logged in
+  useEffect(() => {
+    const LOGGED_IN_VARIABLE = localStorage.getItem("Current User");
+
+    if (router.pathname !== "/") {
+      if (!LOGGED_IN_VARIABLE) {
+        router.push("/");
+      } else {
+        return;
+      }
+    }
+  }, []);
+
+  //! Forcing user to leave login page if logged in
+  useEffect(() => {
+    const LOGGED_IN_VARIABLE = localStorage.getItem("Current User");
+
+    if (router.pathname == "/") {
+      if (LOGGED_IN_VARIABLE) {
+        router.push("/dashboard");
+      } else {
+        return;
+      }
+    }
+  }, []);
+
   //! Updating UI State
   useEffect(() => {
     if (!sessionStorage.getItem("FM Loaded")) {

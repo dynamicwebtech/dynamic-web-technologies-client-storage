@@ -15,12 +15,19 @@ export default function handler(req, res) {
     username === process.env.COLLIN_LOGIN_USERNAME &&
     password === process.env.COLLIN_LOGIN_PASSWORD;
 
-  if (PARKER_LOGIN || COLLIN_LOGIN) {
-    const token = "Logged In User";
+  let token;
+  let message;
 
-    // res.setHeader("Set-Cookie", `token=${token}; Path=/; HttpOnly`);
+  if (PARKER_LOGIN) {
+    token = "Parker";
+    message = "Login successful";
+  } else if (COLLIN_LOGIN) {
+    token = "Collin";
+    message = "Login successful";
+  }
 
-    res.status(200).json({ message: "Login successful", token });
+  if (token) {
+    res.status(200).json({ message, token });
   } else {
     res.status(401).json({ error: "Invalid username or password" });
   }

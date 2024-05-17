@@ -5,34 +5,150 @@
 
 // Fonts
 @font-face {
-    font-family: "Open Sans Extra Bold";
-    src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-ExtraBold.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Bold";
-    src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Bold.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Semi Bold";
-    src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-SemiBold.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Medium";
-    src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Medium.ttf");
-  }
-  @font-face {
-    font-family: "Open Sans Regular";
-    src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Regular.ttf");
-  }
+  font-family: "Open Sans Extra Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Open Sans Medium";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Medium.ttf");
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("https://raw.githubusercontent.com/dynamicwebtech/client_CDNS/main/dynamic-web-technologies/fonts/OpenSans-Regular.ttf");
+}
 
-// Desktop 
+// Desktop
+.index_top {
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
 
+  .index_top_inner {
+    img {
+      max-width: 580px;
+      display: block;
+      @include quickCenter("relative");
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: $Logo;
+      font-family: "Open Sans Bold";
+      opacity: 0.5;
+    }
+  }
+}
+.index_login_form {
+  margin-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  form {
+    width: 100%;
+
+    .form_set {
+      width: 100%;
+      margin-bottom: 15px;
+
+      input {
+        font-family: "Open Sans Semi Bold";
+        width: 100%;
+        height: 50px;
+        background-color: $Alto;
+        color: black;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .error {
+      font-family: "Open Sans Semi Bold";
+      font-size: $SmallLink;
+      color: red;
+      display: block;
+      margin-top: 20px;
+    }
+
+    .form_btns {
+      margin-top: 30px;
+      @include displayElement(flex, flex-start, center);
+
+      .reset {
+        border: 3px solid $Atlantis;
+        color: $Atlantis;
+        padding: 10px;
+        text-transform: uppercase;
+        margin-right: 15px;
+        font-family: "Open Sans Bold";
+
+        &:hover {
+          background-color: $Atlantis;
+          color: white;
+        }
+      }
+
+      .login {
+        border: 3px solid $EasternBlue;
+        color: $EasternBlue;
+        padding: 10px;
+        text-transform: uppercase;
+        font-family: "Open Sans Bold";
+
+        &:hover {
+          background-color: $EasternBlue;
+          color: white;
+        }
+      }
+    }
+  }
+}
 
 // Responsive
 @media all and (max-width: 1995px) {
 }
 
 @media all and (max-width: 991px) {
+  .index_top {
+    .index_top_inner {
+      img {
+        max-width: 500px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .index_login_form {
+    form {
+      .form_set {
+        input {
+          height: 45px;
+        }
+      }
+
+      .error {
+        font-size: 17px;
+      }
+
+      .form_btns {
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -40,14 +156,130 @@
 
 // Desktop Window (Smallest)
 @media all and (max-width: 768px) {
+  .index_top {
+    .index_top_inner {
+      img {
+        max-width: 400px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .index_login_form {
+    form {
+      .form_set {
+        input {
+          height: 40px;
+        }
+      }
+
+      .error {
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .form_btns {
+        justify-content: center;
+
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
 @media all and (max-width: 419px) {
+  .index_top {
+    padding-left: 40px;
+
+    .index_top_inner {
+      img {
+        max-width: 260px;
+      }
+
+      h1 {
+        font-size: 17px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .index_login_form {
+    form {
+      .form_set {
+        input {
+          height: 35px;
+          font-size: 14px;
+        }
+      }
+
+      .error {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .form_btns {
+        justify-content: center;
+
+        button {
+          font-size: 15px;
+          padding: 8px;
+        }
+      }
+    }
+  }
 }
 
 // Pixel 2 XL
 @media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .index_top {
+    padding-top: 60px;
+    padding-left: 40px;
+
+    .index_top_inner {
+      img {
+        max-width: 300px;
+      }
+
+      h1 {
+        font-size: 17px;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .index_login_form {
+    margin-top: 50px;
+    padding-bottom: 60px;
+
+    form {
+      .form_set {
+        input {
+          height: 35px;
+          font-size: 14px;
+        }
+      }
+
+      .error {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .form_btns {
+        justify-content: center;
+
+        button {
+          font-size: 15px;
+          padding: 8px;
+        }
+      }
+    }
+  }
 }
 
 // Ipad
