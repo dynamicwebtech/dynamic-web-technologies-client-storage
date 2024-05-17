@@ -1,8 +1,8 @@
 # Enables CORS Policy for fonts, etc.
 <FilesMatch "\.(ttf)$">
-    Header set Access-Control-Allow-Origin "PUT_DOMAIN_HERE"
+    Header set Access-Control-Allow-Origin "https://imaginative-elf-147987.netlify.app/"
 </FilesMatch>
-# Header set Access-Control-Allow-Origin "http://dynamicwebtechnologies.com https://dynamicwebtechnologies.com"
+# Header set Access-Control-Allow-Origin "http://imaginative-elf-147987.netlify.app/ https://imaginative-elf-147987.netlify.app/"
 
 # Browser Caching Expires - Helps boost performance with caching
 <IfModule mod_expires.c>
