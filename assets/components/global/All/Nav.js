@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import { FaHome } from "react-icons/fa";
-import { MdLogout } from "react-icons/md";
+import { MdLogout, MdEmail, MdChat } from "react-icons/md";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import RemoveStorageVariable from "@/assets/functions/data/storage/RemoveStorageVariable";
@@ -53,17 +53,18 @@ export const Nav = () => {
               <div className={`${styles.nav_inner_side_cnt}`}>
                 <div className={`${styles.nav_inner_side_cnt_top}`}>
                   {!ON_DASHBOARD ? (
-                    <button
+                    <a
+                      href="/dashboard"
                       id="dashBoardBtn"
                       className={`${styles.dashboard_btn} orientation-change-element half-second`}
-                      onClick={(e) => {
-                        e.preventDefault();
+                      // onClick={(e) => {
+                      //   e.preventDefault();
 
-                        router.push("/dashboard");
-                      }}
+                      //   router.push("/dashboard/");
+                      // }}
                     >
                       <FaHome className={`${styles.icon}`} />
-                    </button>
+                    </a>
                   ) : null}
 
                   <button
@@ -74,9 +75,9 @@ export const Nav = () => {
 
                       if (localStorage.getItem("Current User")) {
                         RemoveStorageVariable("local", "Current User");
-
-                        router.push("/");
                       }
+
+                      window.location.href = "/";
                     }}
                   >
                     <span>LOGOUT</span>
@@ -95,6 +96,48 @@ export const Nav = () => {
               </div>
             </div>
           </div>
+          {/**
+                    <div className={`${styles.nav_inner_row} row`}>
+            <div
+              className={`${styles.nav_inner_side} ${styles.email_and_tawk} col-lg-12 col-md-12 col-sm-12 col-xs-12`}
+            >
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  // document.body.style.overflowY = "hidden";
+                  // document.body.style.pointerEvents = "none";
+
+                  if (document.getElementById("companyEmailIF")) {
+                    const COMPANY_EMAIL_IF =
+                      document.getElementById("companyEmailIF");
+
+                    COMPANY_EMAIL_IF.style.display = "block";
+                  }
+                }}
+              >
+                <MdEmail /> <span>Access Email</span>
+              </button>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  // document.body.style.overflowY = "hidden";
+                  // document.body.style.pointerEvents = "none";
+
+                  if (document.getElementById("customerChatIF")) {
+                    const CUSTOMER_CHAT_IF =
+                      document.getElementById("customerChatIF");
+
+                    CUSTOMER_CHAT_IF.style.display = "block";
+                  }
+                }}
+              >
+                <MdEmail /> <span>Access Customer Chat</span>
+              </button>
+            </div>
+          </div>
+          */}
         </div>
       </div>
     </section>

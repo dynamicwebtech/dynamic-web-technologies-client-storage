@@ -93,6 +93,14 @@ function MyApp({ Component, pageProps }) {
         return;
       }
     }
+
+    if (router.pathname == "/") {
+      if (LOGGED_IN_VARIABLE) {
+        router.push("/dashboard");
+      } else {
+        return;
+      }
+    }
   }, []);
 
   //! Forcing user to leave login page if logged in
@@ -101,7 +109,6 @@ function MyApp({ Component, pageProps }) {
 
     if (router.pathname == "/") {
       if (LOGGED_IN_VARIABLE) {
-        router.push("/dashboard");
       } else {
         return;
       }

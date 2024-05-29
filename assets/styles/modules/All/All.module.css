@@ -89,6 +89,36 @@
   margin-left: 7px;
 }
 
+.iframe {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.iframe .darken {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.iframe iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  max-height: 900px;
+  border: 2px solid ghostwhite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
 @media all and (max-width: 991px) {
   .nav {
     padding-left: 25px;
@@ -179,6 +209,7 @@
     font-size: 22px;
     margin-right: 0;
     margin-bottom: 20px;
+    display: inline-block;
   }
   .nav .nav_inner .nav_inner_box .nav_inner_row .nav_R .nav_inner_side_cnt .nav_inner_side_cnt_top .logout_btn {
     margin: auto;

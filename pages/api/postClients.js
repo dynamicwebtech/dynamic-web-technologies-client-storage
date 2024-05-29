@@ -1,9 +1,21 @@
-// Import necessary modules
+/**
+ *
+ *  This is the getClients API
+ *
+ */
+
+export const config = {
+  api: {
+    bodyParser: false,
+    sizeLimit: "5gb",
+  },
+};
+
+import multer from "multer";
 import { MongoClient, ObjectId } from "mongodb";
 
-// Define a function to connect to the MongoDB database
 async function connectToDatabase() {
-  const client = new MongoClient(process.env.PROJECTS_DB_CONNECTION_URI, {
+  const client = new MongoClient(process.env.CLIENTS_DB_CONNECTION_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

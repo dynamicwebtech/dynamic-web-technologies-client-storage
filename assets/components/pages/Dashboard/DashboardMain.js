@@ -65,7 +65,10 @@ export const DashboardMain = () => {
     <section id="dashboardMain" className={`${styles.dashboard_main}`}>
       <div className={`${styles.dashboard_main_inner}`}>
         <h1 className="orientation-change-element half-second">
-          User Dashboard
+          User
+          <br />
+          <span> </span>
+          Dashboard
         </h1>
 
         <div className={`${styles.dashboard_main_inner_links}`}>
