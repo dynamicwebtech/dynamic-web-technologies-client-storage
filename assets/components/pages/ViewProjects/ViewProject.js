@@ -128,6 +128,16 @@ export const ViewProject = ({ project }) => {
             </ul>
           </div>
           <div className={`${styles.view_project_set}`}>
+            <span className={`${styles.set_name}`}>Additional Pages:</span>
+            {project.additionalPages !== null &&
+            project.additionalPages !== "" &&
+            project.additionalPages !== undefined ? (
+              <span>{project.additionalPages}</span>
+            ) : (
+              "null"
+            )}
+          </div>
+          <div className={`${styles.view_project_set}`}>
             <span className={`${styles.set_name}`}>Has A Custom Price?:</span>
             <span>
               {project.isCustomPrice !== null &&

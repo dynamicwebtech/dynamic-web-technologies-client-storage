@@ -523,6 +523,125 @@
       }
     }
   }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 550px;
+      max-height: 650px;
+
+      form {
+        .form_set {
+          label {
+            font-size: 16px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 35px;
+            font-size: 15px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 35px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 15px;
+
+              input {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 15px;
+          }
+
+          input {
+            font-size: 15px;
+            height: 32px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 14px;
+
+            input {
+              width: 21px;
+              height: 21px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 15px;
+            }
+
+            input {
+              font-size: 15px;
+              height: 32px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          button {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 550px;
+      max-height: 650px;
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {
@@ -587,6 +706,139 @@
       }
     }
   }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 450px;
+      max-height: 550px;
+
+      .edit_project_inner_top {
+        display: block;
+        text-align: center;
+
+        span {
+          font-size: 23px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-top: 15px;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 16px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 33px;
+            font-size: 14px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 30px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 14px;
+
+              input {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 14px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 30px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 14px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 15px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 30px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          button {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 450px;
+      max-height: 550px;
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Smaller Devices (Phones)
@@ -594,12 +846,228 @@
   .top_text {
     max-width: 300px;
     margin-top: 80px;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 30px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 700px;
+
+      .view_projects_main_inner_box {
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+          }
+
+          .project_L {
+            .project_side_cnt {
+              text-align: center;
+
+              .project_name {
+                font-size: 23px;
+              }
+
+              .domain_name {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .project_R {
+            padding-top: 40px;
+
+            .project_side_cnt {
+              display: block;
+              justify-content: center;
+
+              button {
+                width: 100%;
+                max-width: 80px;
+                height: auto;
+                font-size: 14px;
+                padding: 12px;
+                @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 15px;
+                margin-right: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 300px;
+      max-height: 450px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 25px;
+
+      .edit_project_inner_top {
+        display: block;
+        text-align: center;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-top: 14px;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 15px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 31px;
+            font-size: 14px;
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 29px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 14px;
+
+              input {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 14px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 30px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 14px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 15px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 30px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 300px;
+      max-height: 450px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: block;
+        text-align: center;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-top: 14px;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -610,12 +1078,232 @@
   .top_text {
     max-width: 500px;
     margin-top: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 25px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 30px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 700px;
+
+      .view_projects_main_inner_box {
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            max-width: 100%;
+          }
+
+          .project_L {
+            .project_side_cnt {
+              text-align: center;
+
+              .project_name {
+                font-size: 23px;
+              }
+
+              .domain_name {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .project_R {
+            padding-top: 40px;
+
+            .project_side_cnt {
+              display: flex;
+              justify-content: center;
+
+              button {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                font-size: 14px;
+                padding: 12px;
+                // @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 0;
+                // margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 450px;
+      max-height: 270px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      .edit_project_inner_top {
+        display: flex;
+        text-align: left;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 15px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 31px;
+            font-size: 14px;
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 29px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 14px;
+
+              input {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 14px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 30px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 14px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 15px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 30px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 450px;
+      max-height: 270px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: flex;
+        text-align: left;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -626,12 +1314,235 @@
   .top_text {
     max-width: 500px;
     margin-top: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 36px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 600px;
+
+      .view_projects_main_inner_box {
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            // justify-content: center;
+            height: 200px;
+            width: 100%;
+            max-width: 50%;
+          }
+
+          .project_L {
+            justify-content: flex-start;
+
+            .project_side_cnt {
+              text-align: left;
+
+              .project_name {
+                font-size: 26px;
+              }
+
+              .domain_name {
+                font-size: 18px;
+              }
+            }
+          }
+
+          .project_R {
+            justify-content: flex-end;
+            padding-top: 0;
+
+            .project_side_cnt {
+              display: flex;
+              justify-content: flex-end;
+
+              button {
+                width: 100%;
+                max-width: 40%;
+                height: auto;
+                font-size: 15px;
+                padding: 12px;
+                // @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 0;
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 570px;
+      max-height: 770px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      .edit_project_inner_top {
+        display: flex;
+        text-align: left;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 15px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 31px;
+            font-size: 14px;
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 29px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 14px;
+
+              input {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 14px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 30px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 14px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 15px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 30px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 570px;
+      max-height: 770px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: flex;
+        text-align: left;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -641,12 +1552,235 @@
   .top_text {
     max-width: 600px;
     margin-top: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 35px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 36px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 600px;
+
+      .view_projects_main_inner_box {
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            // justify-content: center;
+            height: 170px;
+            width: 100%;
+            max-width: 50%;
+          }
+
+          .project_L {
+            justify-content: flex-start;
+
+            .project_side_cnt {
+              text-align: left;
+
+              .project_name {
+                font-size: 26px;
+              }
+
+              .domain_name {
+                font-size: 18px;
+              }
+            }
+          }
+
+          .project_R {
+            justify-content: flex-end;
+            padding-top: 0;
+
+            .project_side_cnt {
+              display: flex;
+              justify-content: flex-end;
+
+              button {
+                width: 100%;
+                max-width: 40%;
+                height: auto;
+                font-size: 15px;
+                padding: 12px;
+                // @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 0;
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 570px;
+      max-height: 310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      .edit_project_inner_top {
+        display: flex;
+        text-align: left;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 15px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 31px;
+            font-size: 14px;
+            padding-left: 7px;
+            padding-right: 7px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 29px;
+                font-size: 13px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 14px;
+
+              input {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 14px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 30px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 14px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 15px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 30px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 570px;
+      max-height: 310px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: flex;
+        text-align: left;
+
+        span {
+          font-size: 20px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -657,12 +1791,243 @@
   .top_text {
     max-width: 650px;
     margin-top: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 45px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 41px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 800px;
+
+      .view_projects_main_inner_box {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            // justify-content: center;
+            height: 190px;
+            width: 100%;
+            max-width: 50%;
+          }
+
+          .project_L {
+            justify-content: flex-start;
+
+            .project_side_cnt {
+              text-align: left;
+
+              .project_name {
+                font-size: 32px;
+              }
+
+              .domain_name {
+                font-size: 19px;
+              }
+            }
+          }
+
+          .project_R {
+            justify-content: flex-end;
+            padding-top: 0;
+
+            .project_side_cnt {
+              display: flex;
+              justify-content: flex-end;
+              max-width: 250px;
+
+              button {
+                width: 100%;
+                max-width: 45%;
+                height: auto;
+                font-size: 16px;
+                padding: 12px;
+                // @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 0;
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 670px;
+      max-height: 710px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      .edit_project_inner_top {
+        display: flex;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        span {
+          font-size: 25px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 17px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 35px;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 32px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 17px;
+
+              input {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 17px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 32px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 15px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 17px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 32px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 670px;
+      max-height: 710px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: flex;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        span {
+          font-size: 25px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -672,12 +2037,243 @@
   .top_text {
     max-width: 650px;
     margin-top: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 45px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 41px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 800px;
+
+      .view_projects_main_inner_box {
+        padding-left: 40px;
+        padding-right: 40px;
+
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            // justify-content: center;
+            height: 190px;
+            width: 100%;
+            max-width: 50%;
+          }
+
+          .project_L {
+            justify-content: flex-start;
+
+            .project_side_cnt {
+              text-align: left;
+
+              .project_name {
+                font-size: 32px;
+              }
+
+              .domain_name {
+                font-size: 19px;
+              }
+            }
+          }
+
+          .project_R {
+            justify-content: flex-end;
+            padding-top: 0;
+
+            .project_side_cnt {
+              display: flex;
+              justify-content: flex-end;
+              max-width: 250px;
+
+              button {
+                width: 100%;
+                max-width: 45%;
+                height: auto;
+                font-size: 16px;
+                padding: 12px;
+                // @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 0;
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 670px;
+      max-height: 530px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      .edit_project_inner_top {
+        display: flex;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        span {
+          font-size: 25px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 17px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 35px;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 32px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 17px;
+
+              input {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 17px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 32px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 15px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 17px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 32px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 670px;
+      max-height: 710px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 30px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: flex;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        span {
+          font-size: 25px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -688,12 +2284,243 @@
   .top_text {
     max-width: 850px;
     margin-top: 50px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     @include quickCenter("relative");
 
     .top_text_inner {
       h1 {
         font-size: 41px;
+      }
+    }
+  }
+  .view_projects_main {
+    margin-bottom: 40px;
+
+    .view_projects_main_inner {
+      max-width: 1050px;
+
+      .view_projects_main_inner_box {
+        padding-left: 70px;
+        padding-right: 70px;
+
+        .project {
+          padding-top: 50px;
+          padding-bottom: 50px;
+
+          .project_side {
+            // justify-content: center;
+            height: 240px;
+            width: 100%;
+            max-width: 50%;
+          }
+
+          .project_L {
+            justify-content: flex-start;
+
+            .project_side_cnt {
+              text-align: left;
+
+              .project_name {
+                font-size: 37px;
+              }
+
+              .domain_name {
+                font-size: 22px;
+              }
+            }
+          }
+
+          .project_R {
+            justify-content: flex-end;
+            padding-top: 0;
+
+            .project_side_cnt {
+              display: flex;
+              justify-content: flex-end;
+              max-width: 250px;
+
+              button {
+                width: 100%;
+                max-width: 47%;
+                height: 90px;
+                font-size: 17px;
+                padding: 12px;
+                // @include quickCenter("relative");
+              }
+
+              .edit_project_btn {
+                margin-bottom: 0;
+                margin-right: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit_project {
+    .edit_project_inner {
+      max-width: 970px;
+      max-height: 630px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
+      padding-bottom: 5px;
+
+      .edit_project_inner_top {
+        display: flex;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        span {
+          font-size: 25px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      form {
+        .form_set {
+          label {
+            font-size: 17px;
+          }
+        }
+
+        .single_input {
+          input,
+          select {
+            height: 35px;
+            font-size: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+
+        .comments_notes_set {
+          ul {
+            li {
+              input {
+                height: 32px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .hosting_stuff,
+        .custom_price_stuff {
+          .main_cb_set {
+            label {
+              font-size: 17px;
+
+              input {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+
+        .hosting_set,
+        .custom_price_set {
+          label {
+            font-size: 17px;
+          }
+
+          input {
+            font-size: 14px;
+            height: 32px;
+          }
+        }
+
+        .add_ons_set {
+          .add_on {
+            font-size: 15px;
+
+            input {
+              width: 20px;
+              height: 20px;
+            }
+          }
+
+          .additional_pages_set {
+            label {
+              font-size: 17px;
+            }
+
+            input {
+              font-size: 14px;
+              height: 32px;
+            }
+          }
+        }
+
+        .grand_total_set {
+          margin-top: 35px;
+
+          label,
+          p {
+            font-size: 15px;
+          }
+        }
+
+        .form_btns {
+          flex-wrap: wrap;
+
+          button {
+            font-size: 13px;
+            margin-bottom: 14px;
+          }
+        }
+      }
+    }
+  }
+  .view_project {
+    .view_project_inner {
+      max-width: 970px;
+      max-height: 630px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 30px;
+      padding-bottom: 25px;
+
+      .view_project_inner_top {
+        display: flex;
+        text-align: left;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        span {
+          font-size: 25px;
+        }
+
+        button {
+          @include quickCenter("relative");
+          margin-right: 0;
+          margin-top: 0;
+        }
+      }
+
+      .view_project_inner_main {
+        .view_project_set {
+          span {
+            font-size: 15px;
+          }
+          .set_name {
+            font-size: 16px;
+          }
+
+          ul {
+            li {
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }

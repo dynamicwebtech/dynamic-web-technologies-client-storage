@@ -9,7 +9,7 @@ export const config = {
 };
 
 async function connectToDatabase() {
-  const client = new MongoClient(process.env.PROJECTS_DB_CONNECTION_URI, {
+  const client = new MongoClient(process.env.CLIENTS_DB_CONNECTION_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
@@ -22,17 +22,17 @@ export default async function handler(req, res) {
 
   try {
     if (req.method === "DELETE") {
-      res.status(200).json({ message: "Project deleted successfully!" });
+      res.status(200).json({ message: "Client deleted successfully!" });
     } else {
       res.status(405).json({ error: "Method Not Allowed" });
     }
   } catch (error) {
-    console.error("Error removing Project(s) from database: ", error);
-    res.status(500).json({ error: "Failed to remove Project(s)" });
+    console.error("Error removing Client(s) from database: ", error);
+    res.status(500).json({ error: "Failed to remove Client(s)" });
   } finally {
     if (client) {
       await client.close();
-      console.log("CLOSED connection to Projects DB");
+      console.log("CLOSED connection to Clients DB");
     }
   }
 }
