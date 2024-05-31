@@ -556,7 +556,8 @@ export const AddProjectForm = () => {
           <div className={styles.form_group}>
             <label htmlFor="domainName">
               <span>
-                <span style={{ color: "red" }}>*</span> Domain Name:
+                <span style={{ color: "red" }}>*</span> Domain Name (Ex:
+                test.com):
               </span>
             </label>
             <input
@@ -884,7 +885,7 @@ export const AddProjectForm = () => {
           {formData.isHosting && (
             <div className={`${styles.form_group} ${styles.hosting_group}`}>
               <label htmlFor="renewalDay">
-                <span>Renewal Day:</span>
+                <span>Renewal Day (Ex: June 5th = "5"):</span>
               </label>
               <input
                 type="text"
